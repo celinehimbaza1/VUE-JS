@@ -12,7 +12,16 @@
     <div id="app">
         <h2>I am the template now</h2>
         <div v-if="showbook">
-            <p>{{tittle}} - {{ author }} - {{ age }} </p>
+            <!-- dispalying book data -->
+            <!-- <p>{{tittle}} - {{ author }} - {{ age }} </p> -->
+            <!--for loop-->
+            <ul>
+                <li v-for="item in books">
+<h3>{{item.tittle}}</h3>
+<p>{{item.author}}</p>
+<p>{{item.age}}</p>
+                </li>
+            </ul>
             <!--Click event-->
             <button v-on:click="age++">Increase age</button>
             <button v-on:click="age--">Decrease age</button>
@@ -24,6 +33,7 @@
                  <span v-else>Show Books</span>
              </button>
         
+
     </div>
     <script src="app.js"></script>
 </body>
