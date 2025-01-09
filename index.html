@@ -1,12 +1,30 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue@3.0.2"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Vue JS</title>
 </head>
+
 <body>
-    <p>Welcome to Vue JS :)</p>
+    <h2>Welcome to Vue JS :)</h2>
+    <div id="app">
+        <h2>I am the template now</h2>
+        <div v-if="showbook">
+            <p>{{tittle}} - {{ author }} - {{ age }} </p>
+            <!--Click event-->
+            <button v-on:click="age++">Increase age</button>
+            <button v-on:click="age--">Decrease age</button>
+            <!-- <div @click="tittle='something else'">change title</div> -->
+        </div>
+             <button @click="toggleshowBooks">
+                <span v-if="showbook">Hide Books</span>
+                <span v-if="!showbook">Show Books</span>
+             </button>
+        
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
