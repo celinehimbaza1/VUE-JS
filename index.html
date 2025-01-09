@@ -11,12 +11,15 @@
     <h2>Welcome to Vue JS :)</h2>
     <div id="app">
         <h2>I am the template now</h2>
+        <!--attribute binding-->
+
         <div v-if="showbook">
             <!-- dispalying book data -->
             <!-- <p>{{tittle}} - {{ author }} - {{ age }} </p> -->
             <!--for loop-->
             <ul>
                 <li v-for="item in books">
+<img :src="item.img" :alt="item.tittle">
 <h3>{{item.tittle}}</h3>
 <p>{{item.author}}</p>
 <p>{{item.age}}</p>
